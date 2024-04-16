@@ -61,10 +61,14 @@ x1=runif(50,2,3)
 x2=rnorm(50,4,1)
 y=2*x1+x2
 dat=data.frame(y,x1,x2)
-reg=lm(y~x1+x2,dat)
+reg=lm(y~x1+x2,data)
+
 summary(reg)
+
 plot(y,x1)
+
 abline(lm(y~x1))
+
 predict(reg)
 anova(lm(y~x1))
 
